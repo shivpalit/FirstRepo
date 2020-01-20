@@ -1,0 +1,61 @@
+<!--
+Name: Shiv Palit
+Assignment: Lucky Sevens
+Date Created: 1/19/20
+Most recent revision: 1/19/20
+-->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Lucky Sevens</title>
+        <script type="text/javascript" src="luckySevens.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <style>
+            #T {
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+
+    <body>
+            <div class="container">
+                    <h1>Lucky Sevens</h1>
+                    <form name="luckySevens" onsubmit="return playGame();" class="form-inline">
+                            <div class="form-group">
+                                <label for="bet">Starting Bet: </label>
+                                <input type="number" class="form-control" id="bet" placeholder="$0.00">
+                            </div>
+                            <br />
+                            <br />          
+                            <button type="submit" id="submitButton" class="btn btn-default">Play</button>
+                    </form>
+                    <hr />
+                    <div class="T">
+                        <table id="results" class="table table-striped" style="display:none;">
+                            <tbody>
+                                <tr>
+                                    <td><strong>Starting Bet</strong></td>
+                                    <td>$<span id="startBet"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Rolls Before Going Broke</strong></td>
+                                    <td><span id="totalRolls"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Highest Amount Won</strong></td>
+                                    <td>$<span id="highestWin"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Roll Count at Highest Amount Won</strong></td>
+                                    <td><span id="rollAtHighest"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+    </body>
+
+
+</html>
