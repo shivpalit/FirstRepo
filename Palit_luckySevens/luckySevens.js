@@ -65,9 +65,9 @@ function playGame()
 
     document.getElementById("results").style.display = "block";
     document.getElementById("submitButton").innerText = "Play Again";
-    document.getElementById("startBet").innerText = startBet;
+    document.getElementById("startBet").innerText = startBet.toFixed(2);
     document.getElementById("totalRolls").innerText = totalRolls;
-    document.getElementById("highestWin").innerText = highestWin;
+    document.getElementById("highestWin").innerText = highestWin.toFixed(2);
     document.getElementById("rollAtHighest").innerText = rollAtHighest;
     return false;
 }
