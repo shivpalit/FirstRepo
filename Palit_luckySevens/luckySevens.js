@@ -2,7 +2,7 @@
 Name: Shiv Palit
 Assignment: Lucky Sevens
 Date Created: 1/19/20
-Most recent revision: 1/19/20
+Most recent revision: 1/21/20
 */
 
 function clearErrors()
@@ -24,7 +24,7 @@ function rollDice()
 function playGame()
 {
     clearErrors();
-    var bet = document.forms["luckySevens"]["bet"].value;
+    var bet = parseFloat(document.getElementById("bet").value);
     var startBet = bet;
     var highestWin = bet;
     var dice1 = 0;
@@ -45,21 +45,22 @@ function playGame()
         dice1 = rollDice();
         dice2 = rollDice();
         var total = dice1+dice2;
-        
+
         if(total==7)
         {
-            bet += 4;
+            totalRolls++;
+            bet = bet+4;
             if(bet>highestWin)
             {
-                rollAtHighest = totalRolls;
                 highestWin = bet;
+                rollAtHighest = totalRolls;
             }
         }
         else
         {
             bet-=1;
         }
-        totalRolls++;
+        
     }
 
     document.getElementById("results").style.display = "block";

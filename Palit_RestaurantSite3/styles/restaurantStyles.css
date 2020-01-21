@@ -1,7 +1,7 @@
 /*
 Name: Shiv Palit
 Date Created: 1/6/20
-Most recent revision: 1/20/20
+Most recent revision: 1/21/20
 */
 
 header, footer {
@@ -45,6 +45,7 @@ nav {
     padding-bottom: 12px;
     margin-top: 10px;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 nav .btn {
@@ -70,4 +71,15 @@ nav .btn:visited {
     color: #fef9ff; 
     margin: 0px 10px 0px 10px;
     
+}
+
+
+@media only screen and (max-width: 767px) {
+    .bar {
+        margin-top: 5px;
+        max-width: 90%;
+    }
+    .carousel-inner{
+        height: 55px;
+    }
 }
